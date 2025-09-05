@@ -87,9 +87,10 @@
     { "type": "shell", "command": "sync", "description": "Filesystem sync" },
     { "type": "wait", "duration": 3, "description": "Let sync settle" },
 
-    { "type": "reboot", "description": "Reboot device" },
+    { "type": "shell", "command": "echo '=== Device Optimizer: END ==='" },
 
-    { "type": "shell", "command": "echo '=== Device Optimizer: END ==='" }
+    { "type": "reboot", "description": "Reboot device" }
+    
   ],
   "effects": {
     "power": { "reboot": true, "shutdown": false },
@@ -97,3 +98,4 @@
   }
 
 }
+
