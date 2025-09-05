@@ -1,0 +1,98 @@
+{
+  "id": "device-optimizer-v1",
+  "name": "Device Optimizer (All-in-One)",
+  "description": "Applies display, performance, battery, memory, thermal, network, and app-behavior tweaks, then reboots.",
+  "category": "Performance",
+  "type": "nocode",
+  "version": "1.0.0",
+  "author": "Cellhasher Team",
+  "commands": [
+    { "type": "shell", "command": "echo '=== Device Optimizer: START ==='" },
+
+    { "type": "wait", "duration": 1, "description": "Initial pause" },
+
+    { "type": "shell", "command": "echo '[Display] Applying display and lockscreen settings'" },
+
+    { "type": "shell", "command": "settings put system screen_brightness_mode 0", "description": "Disable auto brightness" },
+    { "type": "shell", "command": "settings put system screen_brightness 255", "description": "Set brightness to max" },
+    { "type": "shell", "command": "settings put secure dark_mode_enabled 1", "description": "Enable dark mode (OEM/OS-specific)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global stay_on_while_plugged_in 7", "description": "Keep screen on when plugged in" },
+
+    { "type": "shell", "command": "settings put secure lock_screen_lock_after_timeout 0", "description": "No lock-after-timeout", "continueOnError": true },
+    { "type": "shell", "command": "settings put secure lock_screen_disabled 1", "description": "Disable lock screen", "continueOnError": true },
+    { "type": "shell", "command": "settings put secure lockscreen.disabled 1", "description": "Legacy lockscreen disable", "continueOnError": true },
+    { "type": "shell", "command": "settings put secure lockscreen.password_type 0", "description": "No password type", "continueOnError": true },
+    { "type": "shell", "command": "locksettings set-disabled TRUE", "description": "Try to disable lock via locksettings", "continueOnError": true },
+
+    { "type": "keyevent", "keycode": 26, "description": "Power toggle (screen off)" },
+    { "type": "wait", "duration": 2, "description": "Wait for screen off" },
+    { "type": "keyevent", "keycode": 26, "description": "Power toggle (screen on)" },
+    { "type": "wait", "duration": 1, "description": "Wait for screen on" },
+
+    { "type": "shell", "command": "am force-stop com.android.systemui", "description": "Restart SystemUI (stop)", "continueOnError": true },
+    { "type": "shell", "command": "am start -n com.android.systemui/.SystemUIService", "description": "Restart SystemUI (start service)", "continueOnError": true },
+    { "type": "wait", "duration": 2, "description": "Stabilize SystemUI" },
+
+    { "type": "shell", "command": "echo '[Performance] Tuning animation and CPU responsiveness'" },
+
+    { "type": "shell", "command": "settings put global window_animation_scale 0", "description": "Disable window animations" },
+    { "type": "shell", "command": "settings put global transition_animation_scale 0", "description": "Disable transition animations" },
+    { "type": "shell", "command": "settings put global animator_duration_scale 0", "description": "Disable animator duration" },
+    { "type": "shell", "command": "settings put global sem_enhanced_cpu_responsiveness 1", "description": "OEM: Enhanced CPU responsiveness", "continueOnError": true },
+    { "type": "shell", "command": "settings put global system_capabilities 100", "description": "OEM: Max system capabilities", "continueOnError": true },
+    { "type": "shell", "command": "settings put global restricted_device_performance 0", "description": "Remove perf restrictions (int)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global cpu_throttling_enabled 0", "description": "Disable CPU throttling", "continueOnError": true },
+    { "type": "shell", "command": "settings put global adaptive_performance_mode 0", "description": "Disable adaptive performance", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[Battery] Disabling saver/adaptive features & background limits'" },
+
+    { "type": "shell", "command": "dumpsys battery unplug", "description": "Simulate unplugged (testing)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global battery_saver_mode 0", "description": "Disable battery saver", "continueOnError": true },
+    { "type": "shell", "command": "settings put global adaptive_battery_management_enabled 0", "description": "Disable adaptive battery", "continueOnError": true },
+    { "type": "shell", "command": "settings put global adaptive_power_saving_setting 0", "description": "Disable power saving", "continueOnError": true },
+    { "type": "shell", "command": "settings put secure background_process_limit -1", "description": "No background process limit", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[Memory] Adjust cached/freezer/zram parameters'" },
+
+    { "type": "shell", "command": "settings put global zram_enable 0", "description": "Disable zram (may require root/OEM)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global ram_expand_size 0", "description": "Disable RAM expansion (OEM)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global cached_apps_freezer disabled", "description": "Disable cached apps freezer (OEM)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global activity_manager_constants \"max_cached_processes=-1\"", "description": "Unlimited cached processes", "continueOnError": true },
+    { "type": "shell", "command": "settings put global background_limit 4", "description": "Increase background processes", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[Thermal] Relax thermal limits (high risk/OEM-specific)'" },
+
+    { "type": "shell", "command": "settings put global temperature_throttling_enabled 0", "description": "Disable temp throttling", "continueOnError": true },
+    { "type": "shell", "command": "settings put global restricted_thermal_mode 0", "description": "Remove thermal restrictions", "continueOnError": true },
+    { "type": "shell", "command": "settings put secure allow_more_heat_value 80", "description": "Raise heat threshold to 80°C", "continueOnError": true },
+    { "type": "shell", "command": "settings put global enhanced_processing 2", "description": "Max processing mode", "continueOnError": true },
+    { "type": "shell", "command": "settings put global restricted_device_performance 0,0", "description": "OEM: Remove CPU/GPU restrictions (comma value)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global sem_low_heat_mode 0", "description": "Disable low heat mode (Samsung)", "continueOnError": true },
+    { "type": "shell", "command": "settings put global hardware_throttling_enable 0", "description": "Disable hardware throttling", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[Network] Wi-Fi power and scanning behavior tweaks'" },
+
+    { "type": "shell", "command": "settings put global wifi_power_save 0", "description": "Disable Wi-Fi power-saving", "continueOnError": true },
+    { "type": "shell", "command": "settings put global wifi_scan_always_enabled 0", "description": "Disable always-on scanning", "continueOnError": true },
+    { "type": "shell", "command": "settings put global wifi_network_recommendations_enabled 0", "description": "Disable network suggestions", "continueOnError": true },
+    { "type": "shell", "command": "settings put global wifi_sleep_policy 2", "description": "Never sleep Wi-Fi", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[Apps] Standby/background checks + processing mode'" },
+
+    { "type": "shell", "command": "settings put global app_standby_enabled 0", "description": "Disable app standby", "continueOnError": true },
+    { "type": "shell", "command": "settings put global force_background_check 0", "description": "Disable background checks", "continueOnError": true },
+    { "type": "shell", "command": "settings put global enhanced_processing 1", "description": "Enhanced processing (not max)", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '[System] Sync prior to reboot'" },
+    { "type": "shell", "command": "sync", "description": "Filesystem sync" },
+    { "type": "wait", "duration": 3, "description": "Let sync settle" },
+
+    { "type": "reboot", "description": "Reboot device" },
+
+    { "type": "shell", "command": "echo '=== Device Optimizer: END ==='" }
+  ],
+  "effects": {
+    "power": { "reboot": true, "shutdown": false },
+    "security": { "modifiesLockScreen": true }
+  }
+}
