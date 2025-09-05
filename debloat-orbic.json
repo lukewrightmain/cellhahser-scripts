@@ -1,0 +1,263 @@
+{
+  "id": "debloat-orbic-joys-v1",
+  "name": "Debloat Apps (Orbic Joys & Android)",
+  "description": "Removes/disables common carrier, Google, and third-party bloat. Attempts uninstall for user 0, then disables if needed. Safe to run on compute-farm devices.",
+  "category": "System",
+  "type": "nocode",
+  "version": "1.0.0",
+  "author": "Cellhasher Team",
+  "commands": [
+    { "type": "shell", "command": "echo '=== Debloat Apps: START ==='" },
+    { "type": "wait", "duration": 1, "description": "Initial pause" },
+
+    { "type": "shell", "command": "echo 'Note: This will attempt pm uninstall --user 0 and then disable-user for each package. Some system apps may only disable.'" },
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- Verizon / Carrier ---'" },
+
+    { "type": "shell", "command": "am force-stop com.verizon.dmclientupdate", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.dmclientupdate", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.dmclientupdate", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.verizon.mips.services", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.mips.services", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.mips.services", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.verizon.obdm_permissions", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.obdm_permissions", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.obdm_permissions", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.verizon.obdm", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.obdm", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.obdm", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.verizon.messaging.vzmsgs", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.messaging.vzmsgs", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.messaging.vzmsgs", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.verizon.llkagent", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.verizon.llkagent", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.verizon.llkagent", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.vcast.mediamanager", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.vcast.mediamanager", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.vcast.mediamanager", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.vzw.hss.myverizon", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.vzw.hss.myverizon", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.vzw.hss.myverizon", "continueOnError": true },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- Google Apps ---'" },
+
+    { "type": "shell", "command": "am force-stop com.google.android.youtube", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.youtube", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.youtube", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.docs", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.docs", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.docs", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.maps", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.maps", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.maps", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.calculator", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.calculator", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.calculator", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.calendar", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.calendar", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.calendar", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.chromecast.app", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.chromecast.app", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.chromecast.app", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.youtube.music", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.youtube.music", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.youtube.music", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.videos", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.videos", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.videos", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.setupwizard", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.setupwizard", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.setupwizard", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.deskclock", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.deskclock", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.deskclock", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.tachyon", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.tachyon", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.tachyon", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.messaging", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.messaging", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.messaging", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.googlequicksearchbox", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.googlequicksearchbox", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.googlequicksearchbox", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.google.android.apps.googleassistant", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.apps.googleassistant", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.apps.googleassistant", "continueOnError": true },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- AOSP Core Apps (remove if device is headless/compute-only) ---'" },
+
+    { "type": "shell", "command": "am force-stop com.android.soundrecorder", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.android.soundrecorder", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.android.soundrecorder", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop org.codeaurora.dialer", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 org.codeaurora.dialer", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 org.codeaurora.dialer", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.android.contacts", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.android.contacts", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.android.contacts", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.android.vending", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.android.vending", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.android.vending", "continueOnError": true },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- Gmail & Other Google ---'" },
+
+    { "type": "shell", "command": "am force-stop com.google.android.gm", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.google.android.gm", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.google.android.gm", "continueOnError": true },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- Third-Party (games, social, streaming, misc) ---'" },
+
+    { "type": "shell", "command": "am force-stop com.dreamgames.royalmatch", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.dreamgames.royalmatch", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.dreamgames.royalmatch", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop net.supertreat.solitaire", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 net.supertreat.solitaire", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 net.supertreat.solitaire", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.disney.disneyplus", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.disney.disneyplus", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.disney.disneyplus", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop air.com.playtika.slotomania", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 air.com.playtika.slotomania", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 air.com.playtika.slotomania", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.tripledot.solitaire", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.tripledot.solitaire", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.tripledot.solitaire", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.facebook.appmanager", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.facebook.appmanager", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.facebook.appmanager", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop tv.pluto.android", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 tv.pluto.android", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 tv.pluto.android", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.einnovation.temu", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.einnovation.temu", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.einnovation.temu", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.weather.Weather", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.weather.Weather", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.weather.Weather", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.tripledot.woodoku", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.tripledot.woodoku", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.tripledot.woodoku", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.king.candycrushsaga", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.king.candycrushsaga", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.king.candycrushsaga", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.tubitv", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.tubitv", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.tubitv", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop in.playsimple.wordtrip", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 in.playsimple.wordtrip", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 in.playsimple.wordtrip", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.onedebit.chime", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.onedebit.chime", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.onedebit.chime", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop me.lyft.android", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 me.lyft.android", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 me.lyft.android", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop de.wetteronline.wetterapp", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 de.wetteronline.wetterapp", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 de.wetteronline.wetterapp", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.dti.folderlauncher", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.dti.folderlauncher", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.dti.folderlauncher", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.huub.viper", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.huub.viper", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.huub.viper", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.odm.batterypreservation", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.odm.batterypreservation", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.odm.batterypreservation", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.fiberlink.maas360.android.control", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.fiberlink.maas360.android.control", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.fiberlink.maas360.android.control", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.facebook.katana", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.facebook.katana", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.facebook.katana", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.moonactive.coinmaster", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.moonactive.coinmaster", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.moonactive.coinmaster", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop air.com.buffalo_studios.newflashbingo", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 air.com.buffalo_studios.newflashbingo", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 air.com.buffalo_studios.newflashbingo", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop in.playsimple.tripcross", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 in.playsimple.tripcross", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 in.playsimple.tripcross", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.staplegames.dice", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.staplegames.dice", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.staplegames.dice", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.gotv.nflgamecenter.us.lite", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.gotv.nflgamecenter.us.lite", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.gotv.nflgamecenter.us.lite", "continueOnError": true },
+
+    { "type": "shell", "command": "am force-stop com.apple.android.music", "continueOnError": true },
+    { "type": "shell", "command": "pm uninstall --user 0 com.apple.android.music", "continueOnError": true },
+    { "type": "shell", "command": "pm disable-user --user 0 com.apple.android.music", "continueOnError": true },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '--- Clean up & memory reclaim ---'" },
+    { "type": "shell", "command": "am kill-all", "description": "Kill background apps", "continueOnError": true },
+    { "type": "shell", "command": "pm trim-caches 500M", "description": "Trim Dalvik/art caches (hint)", "continueOnError": true },
+    { "type": "shell", "command": "cmd package bg-dexopt-job", "description": "Trigger background dexopt", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '=== Debloat Apps: DONE ==='" }
+  ],
+  "effects": {
+    "power": { "reboot": false, "shutdown": false },
+    "security": { "modifiesLockScreen": false }
+  }
+}
