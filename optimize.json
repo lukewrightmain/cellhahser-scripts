@@ -1,6 +1,6 @@
 {
-  "id": "device-optimizer-git",
-  "name": "Device Optimizer (GithubTest)",
+  "id": "device-optimizer",
+  "name": "Device Optimizer",
   "description": "Applies display, performance, battery, memory, thermal, network, and app-behavior tweaks, then reboots.",
   "category": "Performance",
   "type": "nocode",
@@ -98,4 +98,5 @@
   }
 
 }
+
 
