@@ -1,0 +1,36 @@
+{
+  "id": "remove-work-proile",
+  "name": "Remove Work Profile (User 10)",
+  "description": "Removes Android user 10 (work profile) via pm remove-user, with pre/post user listings.",
+  "category": "System",
+  "type": "nocode",
+  "version": "1.0.0",
+  "author": "Cellhasher Team",
+  "commands": [
+    { "type": "shell", "command": "echo '=== Remove Work Profile (User 10): START ==='", "description": "Log start" },
+    { "type": "wait", "duration": 1, "description": "Stabilize" },
+
+    { "type": "shell", "command": "echo '[Pre] Listing users…'" },
+    { "type": "shell", "command": "pm list users", "continueOnError": true },
+    { "type": "shell", "command": "dumpsys user", "continueOnError": true },
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Action] Removing user 10 (work profile)…'" },
+    { "type": "shell", "command": "pm remove-user 10", "description": "Primary removal", "continueOnError": true },
+    { "type": "wait", "duration": 2, "description": "Allow removal to complete" },
+
+    { "type": "shell", "command": "echo '[Fallback] Trying cmd user remove 10 (if supported)…'", "continueOnError": true },
+    { "type": "shell", "command": "cmd user remove 10", "description": "Fallback removal", "continueOnError": true },
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Post] Listing users…'" },
+    { "type": "shell", "command": "pm list users", "continueOnError": true },
+    { "type": "shell", "command": "dumpsys user", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '=== Remove Work Profile (User 10): DONE ==='" }
+  ],
+  "effects": {
+    "power": { "reboot": false, "shutdown": false },
+    "security": { "modifiesLockScreen": false }
+  }
+}
