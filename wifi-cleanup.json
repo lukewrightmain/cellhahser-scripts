@@ -1,6 +1,6 @@
 {
   "id": "wifi-cleanup",
-  "name": "Wi-Fi Cleanup (Remove Saved Networks)",
+  "name": "WiFi Cleanup (Remove Saved Networks)",
   "description": "Disconnects Wi-Fi, removes saved networks, then restarts Wi-Fi.",
   "category": "Network",
   "type": "nocode",
