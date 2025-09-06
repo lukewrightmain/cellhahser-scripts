@@ -1,0 +1,86 @@
+{
+  "id": "wifi-cleanup",
+  "name": "Wi-Fi Cleanup (Remove Saved Networks)",
+  "description": "Disconnects Wi-Fi, removes saved networks, then restarts Wi-Fi. Uses cmd wifi / wpa_cli fallbacks where available.",
+  "category": "Network",
+  "type": "nocode",
+  "version": "1.0.0",
+  "author": "Cellhasher Team",
+  "commands": [
+    { "type": "shell", "command": "echo '=== Wi-Fi Cleanup: START ==='" },
+    { "type": "wait", "duration": 1, "description": "Initial pause" },
+
+    { "type": "shell", "command": "echo '[Step 1] Disconnect current Wi-Fi (if any)'" },
+    { "type": "shell", "command": "cmd wifi disconnect", "continueOnError": true, "description": "Disconnect via cmd wifi (AOSP 10+)" },
+    { "type": "shell", "command": "wpa_cli disconnect", "continueOnError": true, "description": "Fallback: wpa_cli (if present)" },
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Step 2] List saved networks (pre-cleanup)'" },
+    { "type": "shell", "command": "cmd wifi list-networks", "continueOnError": true, "description": "Show saved networks via cmd wifi" },
+    { "type": "shell", "command": "wpa_cli list_networks", "continueOnError": true, "description": "Fallback listing via wpa_cli" },
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Step 3] Remove saved networks by ID (best-effort, no loops)'" },
+
+    { "type": "shell", "command": "cmd wifi remove-network 0", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 1", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 2", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 3", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 4", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 5", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 6", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 7", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 8", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 9", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 10", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 11", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 12", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 13", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 14", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 15", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 16", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 17", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 18", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 19", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 20", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 21", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 22", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 23", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 24", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 25", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 26", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 27", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 28", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 29", "continueOnError": true },
+    { "type": "shell", "command": "cmd wifi remove-network 30", "continueOnError": true },
+
+    { "type": "wait", "duration": 1, "description": "Short pause between cmd wifi and wpa_cli fallbacks" },
+
+    { "type": "shell", "command": "wpa_cli remove_network all", "continueOnError": true, "description": "Fallback: remove all via wpa_cli" },
+    { "type": "shell", "command": "wpa_cli save_config", "continueOnError": true, "description": "Persist wpa_cli removals (if supported)" },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Step 4] Optional cleanup toggles (reduce auto-connect/noise)'" },
+    { "type": "shell", "command": "settings put global wifi_scan_always_enabled 0", "continueOnError": true, "description": "Disable always-on scanning" },
+    { "type": "shell", "command": "settings put global wifi_network_recommendations_enabled 0", "continueOnError": true, "description": "Disable network suggestions" },
+
+    { "type": "wait", "duration": 1 },
+
+    { "type": "shell", "command": "echo '[Step 5] Restart Wi-Fi radio'" },
+    { "type": "shell", "command": "svc wifi disable", "description": "Turn Wi-Fi off" },
+    { "type": "wait", "duration": 2, "description": "Let radio settle" },
+    { "type": "shell", "command": "svc wifi enable", "description": "Turn Wi-Fi on" },
+    { "type": "wait", "duration": 3, "description": "Wait for Wi-Fi to reinitialize" },
+
+    { "type": "shell", "command": "echo '[Step 6] Verify: list saved networks (post-cleanup)'" },
+    { "type": "shell", "command": "cmd wifi list-networks", "continueOnError": true },
+    { "type": "shell", "command": "wpa_cli list_networks", "continueOnError": true },
+
+    { "type": "shell", "command": "echo '=== Wi-Fi Cleanup: DONE ==='" }
+  ],
+  "effects": {
+    "power": { "reboot": false, "shutdown": false },
+    "security": { "modifiesLockScreen": false }
+  }
+}
