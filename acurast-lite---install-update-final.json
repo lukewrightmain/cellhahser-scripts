@@ -1,6 +1,6 @@
 {
   "id": "78cef120-c288-4623-ae93-3c58e98fbc58",
-  "name": "Acurast Lite - Install/Update (Final)",
+  "name": "Acurast Lite - Install/Update",
   "description": "Automatically downloads and installs/updates the latest Acurast Lite processor app from GitHub releases. Works on all devices in parallel using Python and ADB. Uses Tauri for API calls and robust SSL handling.",
   "category": "Custom",
   "type": "Python",
