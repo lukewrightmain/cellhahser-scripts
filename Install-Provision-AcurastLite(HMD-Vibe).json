@@ -1,0 +1,1075 @@
+{
+  "id": "141bb1b2-831d-407b-8697-c8cfa32790db",
+  "name": "Install-Provision-AcurastLite(HMD-Vibe)",
+  "description": "Loaded from Install-Provision-AcurastLite(HMD-Vibe).json",
+  "nodes": [
+    {
+      "type": "adb-command",
+      "position": {
+        "x": -450,
+        "y": -15
+      },
+      "data": {
+        "label": "ADB Command",
+        "command": "am start",
+        "arguments": [
+          "-n",
+          "com.acurast.attested.executor.sbs.canary/com.acurast.attested.executor.ui.MainActivity"
+        ],
+        "timeout": 3000,
+        "isConfigured": true,
+        "afterTimeout": 10000,
+        "beforeTimeout": 100
+      },
+      "id": "d936f7e4-bf7f-4a57-b33c-1f42852f527a",
+      "width": 256,
+      "height": 136,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": -15
+      },
+      "dragging": false
+    },
+    {
+      "type": "start",
+      "position": {
+        "x": -420,
+        "y": -405
+      },
+      "data": {
+        "label": "Start",
+        "isConfigured": true
+      },
+      "id": "25a92a87-6765-4fff-8f9e-7ec1cd732ec4",
+      "width": 186,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -420,
+        "y": -405
+      },
+      "dragging": false
+    },
+    {
+      "type": "end",
+      "position": {
+        "x": -60,
+        "y": 4650
+      },
+      "data": {
+        "label": "End",
+        "isConfigured": true
+      },
+      "id": "bc7908e7-877e-4134-a7b5-15fad75ff9cf",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -60,
+        "y": 4650
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-install-apk",
+      "position": {
+        "x": -45,
+        "y": -150
+      },
+      "data": {
+        "label": "Install APK",
+        "filePath": "C:\\Users\\Lukio-4090\\Downloads\\processor-lite-1.19.0-canary.apk",
+        "beforeTimeout": 0,
+        "afterTimeout": 15,
+        "unit": "s",
+        "isConfigured": true,
+        "sourceType": "repo",
+        "repoOwner": "Acurast",
+        "repoName": "acurast-processor-update",
+        "apkKeyword": "processor-lite-1.19.0-canary"
+      },
+      "id": "6ae5e1b0-a37b-4c14-8e82-3624be72cf4f",
+      "width": 174,
+      "height": 106,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": -150
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 195
+      },
+      "data": {
+        "x": 638.9327404113396,
+        "y": 119.82346109175379,
+        "label": "Tap (639, 120)",
+        "description": "Tap at coordinates (639, 120)",
+        "isConfigured": true
+      },
+      "id": "5d722dbd-4a07-4049-8344-9abfe5aea4d6",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 195
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 255
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 5,
+        "unit": "s",
+        "isConfigured": true
+      },
+      "id": "883ab92f-dc1c-4e9f-8c72-a487454a69db",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 255
+      }
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 615
+      },
+      "data": {
+        "x": 183.5686492495831,
+        "y": 1035.617056578729,
+        "label": "Tap (184, 1036)",
+        "description": "Tap at coordinates (184, 1036)",
+        "isConfigured": true
+      },
+      "id": "e27e929f-a339-494d-9f9d-e69e1e467005",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 615
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 465
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 1,
+        "unit": "s",
+        "isConfigured": true
+      },
+      "id": "cbc9d64e-f88b-4e2a-9841-66020121c293",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 465
+      }
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 825
+      },
+      "data": {
+        "x": 362.86826014452475,
+        "y": 1260.9992810132183,
+        "label": "Tap (363, 1261)",
+        "description": "Tap at coordinates (363, 1261)",
+        "isConfigured": true
+      },
+      "id": "1055f888-e79a-47f7-b453-bf07cf36077c",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 825
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 645
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 1000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "48e5cdbb-40fd-4fb8-a651-49c1b9ed9944",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 645
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 1035
+      },
+      "data": {
+        "x": 354.3301834352418,
+        "y": 225.38222443448925,
+        "label": "Tap (354, 225)",
+        "description": "Tap at coordinates (354, 225)",
+        "isConfigured": true
+      },
+      "id": "a53a5232-c5c1-42a5-b88f-8a8c1d41a408",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 1035
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 870
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 12000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "59970f09-2511-4445-b676-9697399a2cc6",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 870
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-clipboard",
+      "position": {
+        "x": -45,
+        "y": -270
+      },
+      "data": {
+        "label": "Set Clipboard",
+        "text": "",
+        "preserveFormatting": true,
+        "isConfigured": true
+      },
+      "id": "91ee2fbf-6093-4471-b215-266c8120675d",
+      "width": 160,
+      "height": 86,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": -270
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 1245
+      },
+      "data": {
+        "x": 354.3301834352418,
+        "y": 1098.3817266744097,
+        "label": "Tap (354, 1098)",
+        "description": "Tap at coordinates (354, 1098)",
+        "isConfigured": true
+      },
+      "id": "78a59171-2b24-4f08-8333-c4c9bef2e9ae",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 1245
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 1110
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 4500,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "7815a1cc-00c3-427b-9703-558658f598a0",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 1110
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 1320
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 4500,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "f8c2f833-3471-41f4-845a-fe51d0359393",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 1320
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 1455
+      },
+      "data": {
+        "x": 522.2456920511395,
+        "y": 1457.8521099496709,
+        "label": "Tap (522, 1458)",
+        "description": "Tap at coordinates (522, 1458)",
+        "isConfigured": true
+      },
+      "id": "9ef874f2-1673-4ff4-bdb1-2d8f8c8333f3",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 1455
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 1665
+      },
+      "data": {
+        "x": 601.9344080044469,
+        "y": 1460.7050494994746,
+        "label": "Tap (602, 1461)",
+        "description": "Tap at coordinates (602, 1461)",
+        "isConfigured": true
+      },
+      "id": "d2636085-7a80-4c2c-9e69-738fdf124f91",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 1665
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -45,
+        "y": 1530
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 20000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "58bd7a0f-084b-403d-8db8-a046f29fa9f1",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -45,
+        "y": 1530
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": -450,
+        "y": 405
+      },
+      "data": {
+        "x": 294.5636464702613,
+        "y": 870.1465626901168,
+        "label": "Tap (295, 870)",
+        "description": "Tap at coordinates (295, 870)",
+        "isConfigured": true
+      },
+      "id": "a4486caa-81a5-443c-bd48-d985ca1c6ccc",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -450,
+        "y": 405
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": -120,
+        "y": 1830
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 17000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "6340aa0b-afb8-43ea-a11a-63b7c3344859",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -120,
+        "y": 1830
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 30,
+        "y": 2160
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 10000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "480bee25-c704-41c2-b653-b056da37a9cc",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 30,
+        "y": 2160
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 45,
+        "y": 2580
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 7000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "af7eda13-0021-4e3f-89a2-651ebb6bde74",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 45,
+        "y": 2580
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 300,
+        "y": 3315
+      },
+      "data": {
+        "x": 155.10839355197334,
+        "y": 1569.1167523920137,
+        "label": "Tap (155, 1569)",
+        "description": "Tap at coordinates (155, 1569)",
+        "isConfigured": true
+      },
+      "id": "cdc4467a-3c96-4cb5-9b82-7a0c7c6e4210",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 300,
+        "y": 3315
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 300,
+        "y": 3705
+      },
+      "data": {
+        "x": 157.9544191217343,
+        "y": 1574.822631491621,
+        "label": "Tap (158, 1575)",
+        "description": "Tap at coordinates (158, 1575)",
+        "isConfigured": true
+      },
+      "id": "ddd34d6d-2593-44e3-a449-aef2ef2f0201",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 300,
+        "y": 3705
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 315,
+        "y": 4065
+      },
+      "data": {
+        "x": 155.10839355197334,
+        "y": 1569.1167523920137,
+        "label": "Tap (155, 1569)",
+        "description": "Tap at coordinates (155, 1569)",
+        "isConfigured": true
+      },
+      "id": "ba641b7c-17bc-4662-b403-daa71f4c16ee",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 315,
+        "y": 4065
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 75,
+        "y": 2880
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 4000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "9d1c48ed-b281-4a3f-acf7-5c6d171fe920",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 75,
+        "y": 2880
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 285,
+        "y": 2715
+      },
+      "data": {
+        "x": 320.17787659811006,
+        "y": 536.3526353630883,
+        "label": "Tap (320, 536)",
+        "description": "Tap at coordinates (320, 536)",
+        "isConfigured": true
+      },
+      "id": "3b387dda-c56c-467c-bd10-84422b637ed0",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 285,
+        "y": 2715
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 300,
+        "y": 3015
+      },
+      "data": {
+        "x": 644.6247915508616,
+        "y": 701.8231292517007,
+        "label": "Tap (645, 702)",
+        "description": "Tap at coordinates (645, 702)",
+        "isConfigured": true
+      },
+      "id": "47daa5f4-3866-46ad-9349-1aa5dd9f528e",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 300,
+        "y": 3015
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 315,
+        "y": 4395
+      },
+      "data": {
+        "x": 152.26236798221234,
+        "y": 1563.4108732924064,
+        "label": "Tap (152, 1563)",
+        "description": "Tap at coordinates (152, 1563)",
+        "isConfigured": true
+      },
+      "id": "fdfef683-87f3-4134-a620-438adfe69080",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 315,
+        "y": 4395
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 75,
+        "y": 3165
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 4000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "069ed568-27db-447d-a6f5-259f7b3ea3da",
+      "width": 160,
+      "height": 96,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 75,
+        "y": 3165
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 270,
+        "y": 1950
+      },
+      "data": {
+        "x": 351.4841578654808,
+        "y": 621.9408218571982,
+        "label": "Tap (351, 622)",
+        "description": "Tap at coordinates (351, 622)",
+        "isConfigured": true,
+        "duration": 150
+      },
+      "id": "4b5260cb-7c02-4bf2-8059-88684344b850",
+      "width": 256,
+      "height": 132,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 270,
+        "y": 1950
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 360,
+        "y": 4245
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 1000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "d1d12550-33c8-4d0b-bdfe-8c489b602117",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 360,
+        "y": 4245
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 360,
+        "y": 3900
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 1000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "8342cb50-903e-4081-9fb1-0da359743dfc",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 360,
+        "y": 3900
+      },
+      "dragging": false
+    },
+    {
+      "type": "wait",
+      "position": {
+        "x": 360,
+        "y": 3525
+      },
+      "data": {
+        "label": "Wait",
+        "duration": 1000,
+        "unit": "ms",
+        "isConfigured": true
+      },
+      "id": "fdfa34f0-e1f5-4a66-adb4-ed8d98f10b46",
+      "width": 160,
+      "height": 96,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 360,
+        "y": 3525
+      },
+      "dragging": false
+    },
+    {
+      "type": "adb-tap",
+      "position": {
+        "x": 285,
+        "y": 2355
+      },
+      "data": {
+        "x": 519.3996664813785,
+        "y": 419.3821138211382,
+        "label": "Tap (519, 419)",
+        "description": "Tap at coordinates (519, 419)",
+        "isConfigured": true
+      },
+      "id": "58b3491a-01d8-4353-b673-ab585c9babf4",
+      "width": 256,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 285,
+        "y": 2355
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "6ae5e1b0-a37b-4c14-8e82-3624be72cf4f",
+      "sourceHandle": null,
+      "target": "d936f7e4-bf7f-4a57-b33c-1f42852f527a",
+      "targetHandle": null,
+      "id": "reactflow__edge-6ae5e1b0-a37b-4c14-8e82-3624be72cf4f-d936f7e4-bf7f-4a57-b33c-1f42852f527a"
+    },
+    {
+      "source": "d936f7e4-bf7f-4a57-b33c-1f42852f527a",
+      "sourceHandle": null,
+      "target": "5d722dbd-4a07-4049-8344-9abfe5aea4d6",
+      "targetHandle": null,
+      "id": "reactflow__edge-d936f7e4-bf7f-4a57-b33c-1f42852f527a-5d722dbd-4a07-4049-8344-9abfe5aea4d6"
+    },
+    {
+      "source": "5d722dbd-4a07-4049-8344-9abfe5aea4d6",
+      "sourceHandle": null,
+      "target": "883ab92f-dc1c-4e9f-8c72-a487454a69db",
+      "targetHandle": null,
+      "id": "reactflow__edge-5d722dbd-4a07-4049-8344-9abfe5aea4d6-883ab92f-dc1c-4e9f-8c72-a487454a69db"
+    },
+    {
+      "source": "cbc9d64e-f88b-4e2a-9841-66020121c293",
+      "sourceHandle": null,
+      "target": "e27e929f-a339-494d-9f9d-e69e1e467005",
+      "targetHandle": null,
+      "id": "reactflow__edge-cbc9d64e-f88b-4e2a-9841-66020121c293-e27e929f-a339-494d-9f9d-e69e1e467005"
+    },
+    {
+      "source": "e27e929f-a339-494d-9f9d-e69e1e467005",
+      "sourceHandle": null,
+      "target": "48e5cdbb-40fd-4fb8-a651-49c1b9ed9944",
+      "targetHandle": null,
+      "id": "reactflow__edge-e27e929f-a339-494d-9f9d-e69e1e467005-48e5cdbb-40fd-4fb8-a651-49c1b9ed9944"
+    },
+    {
+      "source": "48e5cdbb-40fd-4fb8-a651-49c1b9ed9944",
+      "sourceHandle": null,
+      "target": "1055f888-e79a-47f7-b453-bf07cf36077c",
+      "targetHandle": null,
+      "id": "reactflow__edge-48e5cdbb-40fd-4fb8-a651-49c1b9ed9944-1055f888-e79a-47f7-b453-bf07cf36077c"
+    },
+    {
+      "source": "1055f888-e79a-47f7-b453-bf07cf36077c",
+      "sourceHandle": null,
+      "target": "59970f09-2511-4445-b676-9697399a2cc6",
+      "targetHandle": null,
+      "id": "reactflow__edge-1055f888-e79a-47f7-b453-bf07cf36077c-59970f09-2511-4445-b676-9697399a2cc6"
+    },
+    {
+      "source": "59970f09-2511-4445-b676-9697399a2cc6",
+      "sourceHandle": null,
+      "target": "a53a5232-c5c1-42a5-b88f-8a8c1d41a408",
+      "targetHandle": null,
+      "id": "reactflow__edge-59970f09-2511-4445-b676-9697399a2cc6-a53a5232-c5c1-42a5-b88f-8a8c1d41a408"
+    },
+    {
+      "source": "25a92a87-6765-4fff-8f9e-7ec1cd732ec4",
+      "sourceHandle": null,
+      "target": "91ee2fbf-6093-4471-b215-266c8120675d",
+      "targetHandle": null,
+      "id": "reactflow__edge-25a92a87-6765-4fff-8f9e-7ec1cd732ec4-91ee2fbf-6093-4471-b215-266c8120675d"
+    },
+    {
+      "source": "91ee2fbf-6093-4471-b215-266c8120675d",
+      "sourceHandle": null,
+      "target": "6ae5e1b0-a37b-4c14-8e82-3624be72cf4f",
+      "targetHandle": null,
+      "id": "reactflow__edge-91ee2fbf-6093-4471-b215-266c8120675d-6ae5e1b0-a37b-4c14-8e82-3624be72cf4f"
+    },
+    {
+      "source": "a53a5232-c5c1-42a5-b88f-8a8c1d41a408",
+      "sourceHandle": null,
+      "target": "7815a1cc-00c3-427b-9703-558658f598a0",
+      "targetHandle": null,
+      "id": "reactflow__edge-a53a5232-c5c1-42a5-b88f-8a8c1d41a408-7815a1cc-00c3-427b-9703-558658f598a0"
+    },
+    {
+      "source": "7815a1cc-00c3-427b-9703-558658f598a0",
+      "sourceHandle": null,
+      "target": "78a59171-2b24-4f08-8333-c4c9bef2e9ae",
+      "targetHandle": null,
+      "id": "reactflow__edge-7815a1cc-00c3-427b-9703-558658f598a0-78a59171-2b24-4f08-8333-c4c9bef2e9ae"
+    },
+    {
+      "source": "78a59171-2b24-4f08-8333-c4c9bef2e9ae",
+      "sourceHandle": null,
+      "target": "f8c2f833-3471-41f4-845a-fe51d0359393",
+      "targetHandle": null,
+      "id": "reactflow__edge-78a59171-2b24-4f08-8333-c4c9bef2e9ae-f8c2f833-3471-41f4-845a-fe51d0359393"
+    },
+    {
+      "source": "f8c2f833-3471-41f4-845a-fe51d0359393",
+      "sourceHandle": null,
+      "target": "9ef874f2-1673-4ff4-bdb1-2d8f8c8333f3",
+      "targetHandle": null,
+      "id": "reactflow__edge-f8c2f833-3471-41f4-845a-fe51d0359393-9ef874f2-1673-4ff4-bdb1-2d8f8c8333f3"
+    },
+    {
+      "source": "9ef874f2-1673-4ff4-bdb1-2d8f8c8333f3",
+      "sourceHandle": null,
+      "target": "58bd7a0f-084b-403d-8db8-a046f29fa9f1",
+      "targetHandle": null,
+      "id": "reactflow__edge-9ef874f2-1673-4ff4-bdb1-2d8f8c8333f3-58bd7a0f-084b-403d-8db8-a046f29fa9f1"
+    },
+    {
+      "source": "58bd7a0f-084b-403d-8db8-a046f29fa9f1",
+      "sourceHandle": null,
+      "target": "d2636085-7a80-4c2c-9e69-738fdf124f91",
+      "targetHandle": null,
+      "id": "reactflow__edge-58bd7a0f-084b-403d-8db8-a046f29fa9f1-d2636085-7a80-4c2c-9e69-738fdf124f91"
+    },
+    {
+      "source": "883ab92f-dc1c-4e9f-8c72-a487454a69db",
+      "sourceHandle": null,
+      "target": "a4486caa-81a5-443c-bd48-d985ca1c6ccc",
+      "targetHandle": null,
+      "id": "reactflow__edge-883ab92f-dc1c-4e9f-8c72-a487454a69db-a4486caa-81a5-443c-bd48-d985ca1c6ccc"
+    },
+    {
+      "source": "a4486caa-81a5-443c-bd48-d985ca1c6ccc",
+      "sourceHandle": null,
+      "target": "cbc9d64e-f88b-4e2a-9841-66020121c293",
+      "targetHandle": null,
+      "id": "reactflow__edge-a4486caa-81a5-443c-bd48-d985ca1c6ccc-cbc9d64e-f88b-4e2a-9841-66020121c293"
+    },
+    {
+      "source": "d2636085-7a80-4c2c-9e69-738fdf124f91",
+      "sourceHandle": null,
+      "target": "6340aa0b-afb8-43ea-a11a-63b7c3344859",
+      "targetHandle": null,
+      "id": "reactflow__edge-d2636085-7a80-4c2c-9e69-738fdf124f91-6340aa0b-afb8-43ea-a11a-63b7c3344859"
+    },
+    {
+      "source": "af7eda13-0021-4e3f-89a2-651ebb6bde74",
+      "sourceHandle": null,
+      "target": "3b387dda-c56c-467c-bd10-84422b637ed0",
+      "targetHandle": null,
+      "id": "reactflow__edge-af7eda13-0021-4e3f-89a2-651ebb6bde74-3b387dda-c56c-467c-bd10-84422b637ed0"
+    },
+    {
+      "source": "3b387dda-c56c-467c-bd10-84422b637ed0",
+      "sourceHandle": null,
+      "target": "9d1c48ed-b281-4a3f-acf7-5c6d171fe920",
+      "targetHandle": null,
+      "id": "reactflow__edge-3b387dda-c56c-467c-bd10-84422b637ed0-9d1c48ed-b281-4a3f-acf7-5c6d171fe920"
+    },
+    {
+      "source": "9d1c48ed-b281-4a3f-acf7-5c6d171fe920",
+      "sourceHandle": null,
+      "target": "47daa5f4-3866-46ad-9349-1aa5dd9f528e",
+      "targetHandle": null,
+      "id": "reactflow__edge-9d1c48ed-b281-4a3f-acf7-5c6d171fe920-47daa5f4-3866-46ad-9349-1aa5dd9f528e"
+    },
+    {
+      "source": "47daa5f4-3866-46ad-9349-1aa5dd9f528e",
+      "sourceHandle": null,
+      "target": "069ed568-27db-447d-a6f5-259f7b3ea3da",
+      "targetHandle": null,
+      "id": "reactflow__edge-47daa5f4-3866-46ad-9349-1aa5dd9f528e-069ed568-27db-447d-a6f5-259f7b3ea3da"
+    },
+    {
+      "source": "069ed568-27db-447d-a6f5-259f7b3ea3da",
+      "sourceHandle": null,
+      "target": "cdc4467a-3c96-4cb5-9b82-7a0c7c6e4210",
+      "targetHandle": null,
+      "id": "reactflow__edge-069ed568-27db-447d-a6f5-259f7b3ea3da-cdc4467a-3c96-4cb5-9b82-7a0c7c6e4210"
+    },
+    {
+      "source": "fdfef683-87f3-4134-a620-438adfe69080",
+      "sourceHandle": null,
+      "target": "bc7908e7-877e-4134-a7b5-15fad75ff9cf",
+      "targetHandle": null,
+      "id": "reactflow__edge-fdfef683-87f3-4134-a620-438adfe69080-bc7908e7-877e-4134-a7b5-15fad75ff9cf"
+    },
+    {
+      "source": "6340aa0b-afb8-43ea-a11a-63b7c3344859",
+      "sourceHandle": null,
+      "target": "4b5260cb-7c02-4bf2-8059-88684344b850",
+      "targetHandle": null,
+      "id": "reactflow__edge-6340aa0b-afb8-43ea-a11a-63b7c3344859-4b5260cb-7c02-4bf2-8059-88684344b850"
+    },
+    {
+      "source": "4b5260cb-7c02-4bf2-8059-88684344b850",
+      "sourceHandle": null,
+      "target": "480bee25-c704-41c2-b653-b056da37a9cc",
+      "targetHandle": null,
+      "id": "reactflow__edge-4b5260cb-7c02-4bf2-8059-88684344b850-480bee25-c704-41c2-b653-b056da37a9cc"
+    },
+    {
+      "source": "ba641b7c-17bc-4662-b403-daa71f4c16ee",
+      "sourceHandle": null,
+      "target": "d1d12550-33c8-4d0b-bdfe-8c489b602117",
+      "targetHandle": null,
+      "id": "reactflow__edge-ba641b7c-17bc-4662-b403-daa71f4c16ee-d1d12550-33c8-4d0b-bdfe-8c489b602117"
+    },
+    {
+      "source": "d1d12550-33c8-4d0b-bdfe-8c489b602117",
+      "sourceHandle": null,
+      "target": "fdfef683-87f3-4134-a620-438adfe69080",
+      "targetHandle": null,
+      "id": "reactflow__edge-d1d12550-33c8-4d0b-bdfe-8c489b602117-fdfef683-87f3-4134-a620-438adfe69080"
+    },
+    {
+      "source": "8342cb50-903e-4081-9fb1-0da359743dfc",
+      "sourceHandle": null,
+      "target": "ba641b7c-17bc-4662-b403-daa71f4c16ee",
+      "targetHandle": null,
+      "id": "reactflow__edge-8342cb50-903e-4081-9fb1-0da359743dfc-ba641b7c-17bc-4662-b403-daa71f4c16ee"
+    },
+    {
+      "source": "ddd34d6d-2593-44e3-a449-aef2ef2f0201",
+      "sourceHandle": null,
+      "target": "8342cb50-903e-4081-9fb1-0da359743dfc",
+      "targetHandle": null,
+      "id": "reactflow__edge-ddd34d6d-2593-44e3-a449-aef2ef2f0201-8342cb50-903e-4081-9fb1-0da359743dfc"
+    },
+    {
+      "source": "cdc4467a-3c96-4cb5-9b82-7a0c7c6e4210",
+      "sourceHandle": null,
+      "target": "fdfa34f0-e1f5-4a66-adb4-ed8d98f10b46",
+      "targetHandle": null,
+      "id": "reactflow__edge-cdc4467a-3c96-4cb5-9b82-7a0c7c6e4210-fdfa34f0-e1f5-4a66-adb4-ed8d98f10b46"
+    },
+    {
+      "source": "fdfa34f0-e1f5-4a66-adb4-ed8d98f10b46",
+      "sourceHandle": null,
+      "target": "ddd34d6d-2593-44e3-a449-aef2ef2f0201",
+      "targetHandle": null,
+      "id": "reactflow__edge-fdfa34f0-e1f5-4a66-adb4-ed8d98f10b46-ddd34d6d-2593-44e3-a449-aef2ef2f0201"
+    },
+    {
+      "source": "480bee25-c704-41c2-b653-b056da37a9cc",
+      "sourceHandle": null,
+      "target": "58b3491a-01d8-4353-b673-ab585c9babf4",
+      "targetHandle": null,
+      "id": "reactflow__edge-480bee25-c704-41c2-b653-b056da37a9cc-58b3491a-01d8-4353-b673-ab585c9babf4"
+    },
+    {
+      "source": "58b3491a-01d8-4353-b673-ab585c9babf4",
+      "sourceHandle": null,
+      "target": "af7eda13-0021-4e3f-89a2-651ebb6bde74",
+      "targetHandle": null,
+      "id": "reactflow__edge-58b3491a-01d8-4353-b673-ab585c9babf4-af7eda13-0021-4e3f-89a2-651ebb6bde74"
+    }
+  ],
+  "createdAt": "2025-10-10T22:40:11.948Z",
+  "updatedAt": "2025-10-10T22:40:11.948Z",
+  "exportDate": "2025-10-10T22:43:50.559Z",
+  "version": "1.0"
+}
