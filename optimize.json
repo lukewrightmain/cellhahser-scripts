@@ -1,6 +1,6 @@
 {
   "id": "device-optimizer",
-  "name": "Device Optimizer",
+  "name": "Device Optimizer (Do Not Use with HMD/Nokia)",
   "description": "Applies display, performance, battery, memory, thermal, network, and app-behavior tweaks, then reboots.",
   "category": "Performance",
   "type": "nocode",
@@ -98,5 +98,6 @@
   }
 
 }
+
 
 
