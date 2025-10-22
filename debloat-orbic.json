@@ -123,10 +123,6 @@
     { "type": "shell", "command": "pm uninstall --user 0 com.android.contacts", "continueOnError": true },
     { "type": "shell", "command": "pm disable-user --user 0 com.android.contacts", "continueOnError": true },
 
-    { "type": "shell", "command": "am force-stop com.android.vending", "continueOnError": true },
-    { "type": "shell", "command": "pm uninstall --user 0 com.android.vending", "continueOnError": true },
-    { "type": "shell", "command": "pm disable-user --user 0 com.android.vending", "continueOnError": true },
-
     { "type": "wait", "duration": 1 },
 
     { "type": "shell", "command": "echo '--- Gmail & Other Google ---'" },
