@@ -1,14 +1,14 @@
 {
   "id": "9291145d-fb45-4222-a44c-25123e5bc0cf",
   "name": "Update Unity",
-  "description": "Created in Script Creator",
+  "description": "Update & Install Unity, One Click & Wait (It will take some time) (Must have python installed locally)",
   "category": "Custom",
   "type": "Python",
-  "version": "1.0.0",
-  "author": "Cellhasher User",
+  "version": "1.2.0",
+  "author": "Cellhasher",
   "tags": [
     "python",
-    "exported"
+    "unity"
   ],
   "effects": {
     "power": {
