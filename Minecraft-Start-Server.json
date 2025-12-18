@@ -1,11 +1,11 @@
 {
   "id": "script-1766087404414",
-  "name": "Exported Python Script",
-  "description": "Python script exported from Cellhasher Script Creator",
+  "name": "Minecraft Server Run",
+  "description": "Once You Install your Minecraft Server, Start it again with 1 click.",
   "category": "Custom",
   "type": "Python",
   "version": "1.0.0",
-  "author": "Cellhasher User",
+  "author": "Cellhasher Team",
   "tags": [
     "python",
     "exported"
