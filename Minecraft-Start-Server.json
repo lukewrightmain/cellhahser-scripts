@@ -1,7 +1,7 @@
 {
   "id": "script-1766088614382",
-  "name": "Exported Python Script",
-  "description": "Python script exported from Cellhasher Script Creator",
+  "name": "Minecraft Server Start",
+  "description": "Once your Minecraft Server is Installed, Use this to Start your server",
   "category": "Custom",
   "type": "Python",
   "version": "1.0.0",
