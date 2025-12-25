@@ -1,11 +1,11 @@
 {
   "id": "script-1766639645555",
-  "name": "Exported Python Script",
-  "description": "Python script exported from Cellhasher Script Creator",
+  "name": "Cellhasher Termux SSH Setup",
+  "description": "Cellhasher Termux SSH Setup, Runs on host Machine (Requires Python)",
   "category": "Custom",
   "type": "Python",
   "version": "1.0.0",
-  "author": "Cellhasher User",
+  "author": "lastlink",
   "tags": [
     "python",
     "exported"
