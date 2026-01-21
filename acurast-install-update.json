@@ -1,7 +1,7 @@
 {
   "id": "script-1769006048943",
-  "name": "Exported Python Script",
-  "description": "Python script exported from Cellhasher Script Creator",
+  "name": "Acurast Lite Install/Update",
+  "description": "Updates to the Latest Mainnet Acurast Lite Version or Installs if you do not have it installed.",
   "category": "Custom",
   "type": "Python",
   "version": "1.0.0",
