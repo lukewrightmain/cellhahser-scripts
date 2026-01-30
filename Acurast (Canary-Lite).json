@@ -1,11 +1,11 @@
 {
   "id": "script-1769789835606",
-  "name": "Exported Python Script",
-  "description": "Python script exported from Cellhasher Script Creator",
+  "name": "Canary Acurast",
+  "description": "Canary Acurast Install (Lite) (Canary Net)",
   "category": "Custom",
   "type": "Python",
   "version": "1.0.0",
-  "author": "Cellhasher User",
+  "author": "Cellhasher Team",
   "tags": [
     "python",
     "exported"
